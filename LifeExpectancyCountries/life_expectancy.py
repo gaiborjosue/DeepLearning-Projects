@@ -45,7 +45,7 @@ input = InputLayer(input_shape = (features.shape[1], ))
 my_model.add(input)
 
 # Hidden layer
-model.add(Dense(64, activation="relu"))
+my_model.add(Dense(64, activation="relu"))
 
 # Output layer with one neuron since we only need a single output for a regression prediction
 my_model.add(Dense(1))
