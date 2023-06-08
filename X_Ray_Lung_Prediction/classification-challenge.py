@@ -17,13 +17,13 @@ BATCH_SIZE = 32
 training_data_generator = ImageDataGenerator(rescale=1./255, zoom_range=0.1, rotation_range=25, width_shift_range=0.05, height_shift_range=0.05)
 
 # The data has 3 classes
-training_iterator = training_data_generator.flow_from_directory('X_Ray_Lung_Prediction\\classification-challenge-starter\\Covid19-dataset\\train', batch_size=BATCH_SIZE, class_mode='categorical', color_mode='grayscale')
+training_iterator = training_data_generator.flow_from_directory('X_Ray_Lung_Prediction\\Covid19-dataset\\train', batch_size=BATCH_SIZE, class_mode='categorical', color_mode='grayscale')
 
 training_iterator.next()
 
 validation_data_generator = ImageDataGenerator()
 
-validation_iterator = validation_data_generator.flow_from_directory('X_Ray_Lung_Prediction\\classification-challenge-starter\\Covid19-dataset\\train', batch_size=BATCH_SIZE, class_mode='categorical', color_mode='grayscale')
+validation_iterator = validation_data_generator.flow_from_directory('X_Ray_Lung_Prediction\\Covid19-dataset\\train', batch_size=BATCH_SIZE, class_mode='categorical', color_mode='grayscale')
 
 
 model = Sequential()
